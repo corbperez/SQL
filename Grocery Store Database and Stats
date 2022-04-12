@@ -1,0 +1,23 @@
+CREATE TABLE quikstop (ID INTEGER PRIMARY KEY, PRODUCT TEXT, PRICE INTEGER, QUANTITY INTEGER, AISLE INTEGER);
+
+INSERT INTO quikstop VALUES (1, "APPLE", 1.50, 8, 1);
+INSERT INTO quikstop VALUES (2, "BANANA", 2, 7, 1);
+INSERT INTO quikstop VALUES (3, "CARROT", .75, 12, 1);
+INSERT INTO quikstop VALUES (4, "T.P.", 7, 15, 4);
+INSERT INTO quikstop VALUES (5, "PLATES", 6, 10, 4);
+INSERT INTO quikstop VALUES (6, "BREAD", 4.35, 8, 3);
+INSERT INTO quikstop VALUES (7, "HAIRSPRAY", 5.67, 8, 8);
+INSERT INTO quikstop VALUES (8, "NYQUIL", 5.50, 4, 6);
+INSERT INTO quikstop VALUES (9, "CARDS", 1.99, 20, 10);
+INSERT INTO quikstop VALUES (10, "SHOES", 24.99, 30, 11);
+INSERT INTO quikstop VALUES (11, "PANTS", 22.50, 15, 11);
+INSERT INTO quikstop VALUES (12, "SHIRTS", 19.99, 14, 11);
+INSERT INTO quikstop VALUES (13, "HATS", 5.25, 10, 11);
+INSERT INTO quikstop VALUES (14, "TV", 445, 6, 7);
+INSERT INTO quikstop VALUES (15, "MAGAZINE", 4.50, 10, 10);
+
+SELECT * FROM quikstop;
+
+/* How many items cost more than 5 dollars? */
+SELECT COUNT(*) AS greater_than_5usd
+FROM quikstop WHERE price > 5;
